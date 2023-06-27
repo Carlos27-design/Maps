@@ -1,12 +1,10 @@
-const {writeFileSync, mkdirSync} = require("fs")
+const { writeFileSync, mkdirSync } = require("fs");
 
 require("dotenv").config();
 
+const targetPath = "./src/environments/environments.ts";
 
-
-const targetPath= "./src/environments/environments.ts";
-
-const path = "./src/environments"
+const path = "./src/environments";
 
 const envFileContent = `
 export const environment = {
@@ -17,8 +15,6 @@ export const environment = {
 
 `;
 
+mkdirSync(path, { recursive: true });
 
-mkdirSync(path, {recursive: true});
-
-writeFileSync(targetPath, envFileContent
-  )
+writeFileSync(targetPath, envFileContent);

@@ -35,4 +35,6 @@ export class PropertiesPageComponent {
       lngLat: [-3.7112735618380177, 40.42567285425766],
     },
   ];
+
+  public counter: number = 25;
 }
